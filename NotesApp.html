@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Notes App</title>
+
+    <style>
+        body {
+            background-color: black;    
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #btn {
+            padding: 10px 10px;
+            margin: 10px;
+            border-radius: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: -1px -1px -1px;
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(80, 183, 135);
+            font-size: 20px;
+        }
+
+        #btn2 {
+            padding: 10px 10px;
+            margin: 10px;
+            border-radius: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: -1px -1px -1px;
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(80, 183, 135);
+            font-size: 20px;
+        }
+
+        p{
+            height: 300px;
+            width: 800px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container1">
+        <h1>Welcome to the Notes App</h1>
+        
+        <div class="button-flexbox">
+            <button id="btn">Create</button>
+            <button id="btn2">Delete</button>
+        </div>
+
+        <div id="input-box" class="input-box">
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const button = document.getElementById("btn");
+
+        button.addEventListener("click", () => {
+            let x = document.createElement("p");
+            x.setAttribute("contenteditable", "true")
+            document.getElementById("input-box").append(x)
+
+        });
+
+
+        const del = document.getElementById("btn2");
+
+        btn2.addEventListener("click",()=>{
+            let y = document.querySelector("p");
+            y.remove();
+        })
+
+
+    </script>
+
+</body>
+
+</html>
